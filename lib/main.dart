@@ -9,7 +9,7 @@ import 'home_screen/home_page.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // OneSignal.initialize("088551f9-b784-4bf1-bc91-a1d61a65d9eb");
-  OneSignal.initialize("b25cdc3d-f71f-4724-8f1c-073e773523bc");
+  //OneSignal.initialize("b25cdc3d-f71f-4724-8f1c-073e773523bc");
   runApp(const ProviderScope(child: MyApp()));
 }
 
@@ -27,8 +27,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    initPlatformState();
-    getOneSignalPlayerId();
+    //initPlatformState();
+    //getOneSignalPlayerId();
   }
 
   Future<void> initPlatformState() async {

@@ -12,13 +12,12 @@ class TryingMapScreen extends StatefulWidget {
 
 class _TryingMapScreenState extends State<TryingMapScreen> {
   late final WebViewController _controller;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: WebViewWidget(
         controller: _controller,
-
-
       ),
     );
   }

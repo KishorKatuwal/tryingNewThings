@@ -55,7 +55,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             CustomButton(
-
               text: "Game",
               onTap: () => Navigator.pushNamed(context, GameScreen.routeName),
             ),
