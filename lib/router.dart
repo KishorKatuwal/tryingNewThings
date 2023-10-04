@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:own_project/features/bit_coin/screens/all_bitcon_screen.dart';
 import 'package:own_project/features/bit_coin/screens/each_bit_coin-screen.dart';
 import 'package:own_project/features/game/screens/game_screen.dart';
+import 'package:own_project/features/reading_text/reading_text.dart';
 import 'package:own_project/features/trying_map/trying_map.dart';
 import 'package:own_project/models/bit_coin_model.dart';
 
+import 'features/pdf_reader/pdf_reader.dart';
 import 'features/users/screens/user_screen.dart';
 import 'home_screen/home_page.dart';
 
@@ -39,6 +41,15 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case GameScreen.routeName:
       return MaterialPageRoute(
           builder: (context) => const GameScreen());
+
+      case PDFReaderScreen.routeName:
+      return MaterialPageRoute(
+          builder: (context) => const PDFReaderScreen());
+
+
+      case ReadingTextScreen.routeName:
+      return MaterialPageRoute(
+          builder: (context) => const ReadingTextScreen());
 
     // case CreateGroupScreen.routeName:
     //   return MaterialPageRoute(builder: (context) => const CreateGroupScreen());

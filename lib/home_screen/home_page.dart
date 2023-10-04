@@ -4,6 +4,8 @@ import 'package:own_project/features/users/screens/user_screen.dart';
 
 import '../features/bit_coin/screens/all_bitcon_screen.dart';
 import '../features/game/screens/game_screen.dart';
+import '../features/pdf_reader/pdf_reader.dart';
+import '../features/reading_text/reading_text.dart';
 import '../notification/notification_service.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -29,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
         child: Column(
           children: [
             CustomButton(
@@ -57,6 +59,20 @@ class _MyHomePageState extends State<MyHomePage> {
             CustomButton(
               text: "Game",
               onTap: () => Navigator.pushNamed(context, GameScreen.routeName),
+            ),
+            CustomButton(
+              text: "PDF READER",
+              onTap: () =>
+                  Navigator.pushNamed(context, PDFReaderScreen.routeName),
+            ),
+            CustomButton(
+              text: "Reading Text",
+              onTap: () => Navigator.pushNamed(context, ReadingTextScreen.routeName),
+            ),
+            CustomButton(
+              text: "PDF READER",
+              onTap: () =>
+                  Navigator.pushNamed(context, PDFReaderScreen.routeName),
             ),
           ],
         ),
