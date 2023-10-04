@@ -30,26 +30,19 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       );
 
     case UserScreen.routeName:
-      return MaterialPageRoute(
-          builder: (context) => const UserScreen());
+      return MaterialPageRoute(builder: (context) => const UserScreen());
 
-      case TryingMapScreen.routeName:
-      return MaterialPageRoute(
-          builder: (context) => const TryingMapScreen());
-
+    case TryingMapScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const TryingMapScreen());
 
     case GameScreen.routeName:
-      return MaterialPageRoute(
-          builder: (context) => const GameScreen());
+      return MaterialPageRoute(builder: (context) => const GameScreen());
 
-      case PDFReaderScreen.routeName:
-      return MaterialPageRoute(
-          builder: (context) => const PDFReaderScreen());
+    case PDFReaderScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const PDFReaderScreen());
 
-
-      case ReadingTextScreen.routeName:
-      return MaterialPageRoute(
-          builder: (context) => const ReadingTextScreen());
+    case ReadingTextScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const ReadingTextScreen());
 
     // case CreateGroupScreen.routeName:
     //   return MaterialPageRoute(builder: (context) => const CreateGroupScreen());

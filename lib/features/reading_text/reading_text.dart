@@ -32,14 +32,12 @@ class _ReadingTextScreenState extends State<ReadingTextScreen> {
         child: Transform.scale(
           scale: scale,
           child: Padding(
-            padding: EdgeInsets.all(10.0), // Add 10px padding on all sides
+            padding: const EdgeInsets.all(10.0),
+            // Add 10px padding on all sides
             child: ListView(
               children: [
-                Container(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width - 20.0,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width - 20.0,
                   // Adjust the width by subtracting padding
                   child: RichText(
                     text: TextSpan(
@@ -48,11 +46,11 @@ class _ReadingTextScreenState extends State<ReadingTextScreen> {
                           fontSize: 16.0 * scale,
                           color: Colors
                               .black // Adjust the initial font size as needed
-                      ),
+                          ),
                     ),
                     softWrap: true, // Enable text wrapping
                     maxLines:
-                    null, // Allow unlimited lines (remove this line if you want to limit the number of lines)
+                        null, // Allow unlimited lines (remove this line if you want to limit the number of lines)
                   ),
                 ),
               ],

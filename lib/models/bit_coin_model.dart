@@ -1,8 +1,10 @@
 import 'dart:convert';
 
-List<BitCoinModel> bitCoinModelFromJson(String str) => List<BitCoinModel>.from(json.decode(str).map((x) => BitCoinModel.fromJson(x)));
+List<BitCoinModel> bitCoinModelFromJson(String str) => List<BitCoinModel>.from(
+    json.decode(str).map((x) => BitCoinModel.fromJson(x)));
 
-String bitCoinModelToJson(List<BitCoinModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String bitCoinModelToJson(List<BitCoinModel> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class BitCoinModel {
   final String symbol;
@@ -52,50 +54,50 @@ class BitCoinModel {
   });
 
   factory BitCoinModel.fromJson(Map<String, dynamic> json) => BitCoinModel(
-    symbol: json["symbol"],
-    priceChange: json["priceChange"],
-    priceChangePercent: json["priceChangePercent"],
-    weightedAvgPrice: json["weightedAvgPrice"],
-    prevClosePrice: json["prevClosePrice"],
-    lastPrice: json["lastPrice"],
-    lastQty: json["lastQty"],
-    bidPrice: json["bidPrice"],
-    bidQty: json["bidQty"],
-    askPrice: json["askPrice"],
-    askQty: json["askQty"],
-    openPrice: json["openPrice"],
-    highPrice: json["highPrice"],
-    lowPrice: json["lowPrice"],
-    volume: json["volume"],
-    quoteVolume: json["quoteVolume"],
-    openTime: json["openTime"],
-    closeTime: json["closeTime"],
-    firstId: json["firstId"],
-    lastId: json["lastId"],
-    count: json["count"],
-  );
+        symbol: json["symbol"],
+        priceChange: json["priceChange"],
+        priceChangePercent: json["priceChangePercent"],
+        weightedAvgPrice: json["weightedAvgPrice"],
+        prevClosePrice: json["prevClosePrice"],
+        lastPrice: json["lastPrice"],
+        lastQty: json["lastQty"],
+        bidPrice: json["bidPrice"],
+        bidQty: json["bidQty"],
+        askPrice: json["askPrice"],
+        askQty: json["askQty"],
+        openPrice: json["openPrice"],
+        highPrice: json["highPrice"],
+        lowPrice: json["lowPrice"],
+        volume: json["volume"],
+        quoteVolume: json["quoteVolume"],
+        openTime: json["openTime"],
+        closeTime: json["closeTime"],
+        firstId: json["firstId"],
+        lastId: json["lastId"],
+        count: json["count"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "symbol": symbol,
-    "priceChange": priceChange,
-    "priceChangePercent": priceChangePercent,
-    "weightedAvgPrice": weightedAvgPrice,
-    "prevClosePrice": prevClosePrice,
-    "lastPrice": lastPrice,
-    "lastQty": lastQty,
-    "bidPrice": bidPrice,
-    "bidQty": bidQty,
-    "askPrice": askPrice,
-    "askQty": askQty,
-    "openPrice": openPrice,
-    "highPrice": highPrice,
-    "lowPrice": lowPrice,
-    "volume": volume,
-    "quoteVolume": quoteVolume,
-    "openTime": openTime,
-    "closeTime": closeTime,
-    "firstId": firstId,
-    "lastId": lastId,
-    "count": count,
-  };
+        "symbol": symbol,
+        "priceChange": priceChange,
+        "priceChangePercent": priceChangePercent,
+        "weightedAvgPrice": weightedAvgPrice,
+        "prevClosePrice": prevClosePrice,
+        "lastPrice": lastPrice,
+        "lastQty": lastQty,
+        "bidPrice": bidPrice,
+        "bidQty": bidQty,
+        "askPrice": askPrice,
+        "askQty": askQty,
+        "openPrice": openPrice,
+        "highPrice": highPrice,
+        "lowPrice": lowPrice,
+        "volume": volume,
+        "quoteVolume": quoteVolume,
+        "openTime": openTime,
+        "closeTime": closeTime,
+        "firstId": firstId,
+        "lastId": lastId,
+        "count": count,
+      };
 }

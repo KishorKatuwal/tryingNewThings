@@ -67,7 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             CustomButton(
               text: "Reading Text",
-              onTap: () => Navigator.pushNamed(context, ReadingTextScreen.routeName),
+              onTap: () =>
+                  Navigator.pushNamed(context, ReadingTextScreen.routeName),
             ),
             CustomButton(
               text: "PDF READER",

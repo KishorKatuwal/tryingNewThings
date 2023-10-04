@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:own_project/common/custom_button.dart';
 import 'package:own_project/common/search_loading.dart';
-import 'package:own_project/common/shocu_snackbar.dart';
+import 'package:own_project/common/show_snackbar.dart';
 import 'package:own_project/features/game/controller/game_controller.dart';
 import 'package:own_project/features/game/model/user_gender_model.dart';
 
