@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Pashupatinath Temple",
+    "address": "Pashupati Nath Road, Kathmandu, Nepal",
+    "description": "Pashupatinath Temple is one of the most sacred Hindu temples dedicated to Lord Shiva. It is located on the banks of the Bagmati River in the Kathmandu Valley.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pashupatinath_Temple-2020.jpg/1200px-Pashupatinath_Temple-2020.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Swayambhunath Stupa (Monkey Temple)",
+    "address": "Swayambhu, Kathmandu, Nepal",
+    "description": "Swayambhunath Stupa, also known as the Monkey Temple, is an ancient religious complex atop a hill in the Kathmandu Valley. It is a UNESCO World Heritage Site.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Swayambhunath_temple_-_an_ancient_religious_architecture_of_Nepal.jpg/1200px-Swayambhunath_temple_-_an_ancient_religious_architecture_of_Nepal.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Boudhanath Stupa",
+    "address": "Boudha, Kathmandu, Nepal",
+    "description": "Boudhanath Stupa is one of the largest stupas in Nepal and a major pilgrimage site for Buddhists. It is known for its impressive dome and vibrant prayer flags.",
+    "image": "https://www.oyorooms.com/blog/wp-content/uploads/2019/06/Top-6-Buddhist-Stupas-to-Visit-in-India-Hero-image.jpg"
+  }
+]
+

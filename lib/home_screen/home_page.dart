@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:own_project/common/custom_button.dart';
+import 'package:own_project/features/country/country_screen.dart';
 import 'package:own_project/features/mario/mario_screen.dart';
+import 'package:own_project/features/temples/temple_screen.dart';
 import 'package:own_project/features/users/screens/user_screen.dart';
 
+import '../common/custom_button.dart';
 import '../features/bit_coin/screens/all_bitcon_screen.dart';
 import '../features/computer_games/computer_games_screen.dart';
 import '../features/game/screens/game_screen.dart';
@@ -80,12 +82,23 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               CustomButton(
                 text: "Marios",
-                onTap: () => Navigator.pushNamed(context, AmibboScreen.routeName),
+                onTap: () =>
+                    Navigator.pushNamed(context, AmibboScreen.routeName),
               ),
               CustomButton(
                 text: "Compute Game Screen",
                 onTap: () =>
                     Navigator.pushNamed(context, ComputerGameScreen.routeName),
+              ),
+              CustomButton(
+                text: "Temple Screen",
+                onTap: () =>
+                    Navigator.pushNamed(context, TempleScreen.routeName),
+              ),
+              CustomButton(
+                text: "Country Screen",
+                onTap: () =>
+                    Navigator.pushNamed(context, CountryScreen.routeName),
               ),
             ],
           ),

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:own_project/features/bit_coin/screens/all_bitcon_screen.dart';
 import 'package:own_project/features/bit_coin/screens/each_bit_coin-screen.dart';
 import 'package:own_project/features/computer_games/computer_games_screen.dart';
+import 'package:own_project/features/country/country_screen.dart';
 import 'package:own_project/features/game/screens/game_screen.dart';
 import 'package:own_project/features/reading_text/reading_text.dart';
+import 'package:own_project/features/temples/temple_screen.dart';
 import 'package:own_project/features/trying_map/trying_map.dart';
 import 'package:own_project/models/bit_coin_model.dart';
 
@@ -49,9 +51,15 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case AmibboScreen.routeName:
       return MaterialPageRoute(builder: (context) => const AmibboScreen());
 
+    case TempleScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const TempleScreen());
+
     case ComputerGameScreen.routeName:
       return MaterialPageRoute(
           builder: (context) => const ComputerGameScreen());
+
+    case CountryScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const CountryScreen());
 
     // case CreateGroupScreen.routeName:
     //   return MaterialPageRoute(builder: (context) => const CreateGroupScreen());

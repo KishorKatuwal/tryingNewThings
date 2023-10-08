@@ -62,6 +62,14 @@ class _ComputerGameScreenState extends State<ComputerGameScreen> {
                                           const SizedBox(
                                             width: 10,
                                           ),
+                                          Container(
+                                            width: 1, // Divider width
+                                            height: 100, // Divider height
+                                            color: Colors.black, // Divider color
+                                          ),
+                                          const SizedBox(
+                                            width: 10,
+                                          ),
                                           SizedBox(
                                             width: 220,
                                             child: Column(
@@ -171,10 +179,10 @@ class _ComputerGameScreenState extends State<ComputerGameScreen> {
                                                     "Click here to know more...",
                                                     textAlign: TextAlign.end,
                                                     style: TextStyle(
-                                                      color: Colors.blueGrey,
-                                                      fontSize: 15,
-                                                      fontWeight: FontWeight.w400
-                                                    ),
+                                                        color: Colors.blueGrey,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w400),
                                                   ),
                                                 ),
                                               ],
