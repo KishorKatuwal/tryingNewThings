@@ -14,6 +14,7 @@ class TempleScreen extends StatefulWidget {
 class _TempleScreenState extends State<TempleScreen> {
   final TempleService templeService = TempleService();
   List<TempleModel> templeModel = [];
+  ScrollController scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,8 @@ class _TempleScreenState extends State<TempleScreen> {
         title: const Text("Temple Screen"),
       ),
       body: SingleChildScrollView(
-        child: Container(
+        controller: scrollController,
+        child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Padding(
             padding: const EdgeInsets.all(15),
@@ -31,14 +33,16 @@ class _TempleScreenState extends State<TempleScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                TextFormField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: const InputDecoration(
-                    labelText: 'Search places',
-                    prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(),
+                ListView(shrinkWrap: true, children: [
+                  TextFormField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(
+                      labelText: 'Search places',
+                      prefixIcon: Icon(Icons.search),
+                      border: OutlineInputBorder(),
+                    ),
                   ),
-                ),
+                ]),
                 const SizedBox(
                   height: 10,
                 ),
@@ -58,7 +62,7 @@ class _TempleScreenState extends State<TempleScreen> {
                     ),
                   ),
                 ),
-                const Expanded(child: ReusabelWidget()),
+                const Expanded(child: ReusableWidget()),
                 const SizedBox(
                   height: 10,
                 ),
@@ -129,14 +133,14 @@ class _TempleScreenState extends State<TempleScreen> {
   }
 }
 
-class ReusabelWidget extends StatefulWidget {
-  const ReusabelWidget({super.key});
+class ReusableWidget extends StatefulWidget {
+  const ReusableWidget({super.key});
 
   @override
-  State<ReusabelWidget> createState() => _ReusabelWidgetState();
+  State<ReusableWidget> createState() => _ReusableWidgetState();
 }
 
-class _ReusabelWidgetState extends State<ReusabelWidget> {
+class _ReusableWidgetState extends State<ReusableWidget> {
   final TempleService templeService = TempleService();
   List<TempleModel> templeModel = [];
 
