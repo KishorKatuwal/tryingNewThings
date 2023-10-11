@@ -65,7 +65,8 @@ class _ComputerGameScreenState extends State<ComputerGameScreen> {
                                           Container(
                                             width: 1, // Divider width
                                             height: 100, // Divider height
-                                            color: Colors.black, // Divider color
+                                            color:
+                                                Colors.black, // Divider color
                                           ),
                                           const SizedBox(
                                             width: 10,

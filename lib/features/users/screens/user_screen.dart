@@ -64,7 +64,7 @@ class _UserScreenState extends ConsumerState<UserScreen> {
         title: const Text("User Data"),
       ),
       body: isLoading
-          ? const Center(child:  CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(15),
@@ -95,7 +95,7 @@ class _UserScreenState extends ConsumerState<UserScreen> {
                                 keepAlive: true,
                                 zoom: 18,
                                 maxZoom: 18,
-                                 minZoom: 3,
+                                minZoom: 3,
                                 slideOnBoundaries: true,
                                 center: LatLng(double.parse("27.71049"),
                                     double.parse("85.34868")),

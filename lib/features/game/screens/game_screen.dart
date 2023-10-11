@@ -38,7 +38,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
       setState(() {
         isLoading = false;
       });
-      gender = "";
+      if(!context.mounted) return;
       showSnackBar(context, "Please enter a valid name");
     }
   }
