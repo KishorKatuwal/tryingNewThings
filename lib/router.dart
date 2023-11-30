@@ -9,6 +9,7 @@ import 'package:own_project/features/temples/temple_screen.dart';
 import 'package:own_project/features/trying_map/trying_map.dart';
 import 'package:own_project/models/bit_coin_model.dart';
 
+import 'features/leaflet_map/LeafLetScreen.dart';
 import 'features/mario/mario_screen.dart';
 import 'features/pdf_reader/pdf_reader.dart';
 import 'features/users/screens/user_screen.dart';
@@ -60,6 +61,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
     case CountryScreen.routeName:
       return MaterialPageRoute(builder: (context) => const CountryScreen());
+
+      case LeafLetScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const LeafLetScreen());
 
     // case CreateGroupScreen.routeName:
     //   return MaterialPageRoute(builder: (context) => const CreateGroupScreen());

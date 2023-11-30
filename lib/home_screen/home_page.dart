@@ -8,6 +8,7 @@ import '../common/custom_button.dart';
 import '../features/bit_coin/screens/all_bitcon_screen.dart';
 import '../features/computer_games/computer_games_screen.dart';
 import '../features/game/screens/game_screen.dart';
+import '../features/leaflet_map/LeafLetScreen.dart';
 import '../features/pdf_reader/pdf_reader.dart';
 import '../features/reading_text/reading_text.dart';
 import '../notification/notification_service.dart';
@@ -99,6 +100,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 text: "Country Screen",
                 onTap: () =>
                     Navigator.pushNamed(context, CountryScreen.routeName),
+              ),
+              CustomButton(
+                text: "Leaflet MAP Screen",
+                onTap: () =>
+                    Navigator.pushNamed(context, LeafLetScreen.routeName),
               ),
             ],
           ),
