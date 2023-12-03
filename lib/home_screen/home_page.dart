@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:own_project/features/country/country_screen.dart';
+import 'package:own_project/features/making_favourite/trying_favourite.dart';
 import 'package:own_project/features/mario/mario_screen.dart';
 import 'package:own_project/features/temples/temple_screen.dart';
 import 'package:own_project/features/users/screens/user_screen.dart';
@@ -105,6 +106,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 text: "Leaflet MAP Screen",
                 onTap: () =>
                     Navigator.pushNamed(context, LeafLetScreen.routeName),
+              ),
+              CustomButton(
+                text: "Trying Favourite Screen",
+                onTap: () => Navigator.pushNamed(
+                    context, TryingFavouriteScreen.routeName),
               ),
             ],
           ),

@@ -4,6 +4,7 @@ import 'package:own_project/features/bit_coin/screens/each_bit_coin-screen.dart'
 import 'package:own_project/features/computer_games/computer_games_screen.dart';
 import 'package:own_project/features/country/country_screen.dart';
 import 'package:own_project/features/game/screens/game_screen.dart';
+import 'package:own_project/features/making_favourite/trying_favourite.dart';
 import 'package:own_project/features/reading_text/reading_text.dart';
 import 'package:own_project/features/temples/temple_screen.dart';
 import 'package:own_project/features/trying_map/trying_map.dart';
@@ -62,8 +63,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case CountryScreen.routeName:
       return MaterialPageRoute(builder: (context) => const CountryScreen());
 
-      case LeafLetScreen.routeName:
+    case LeafLetScreen.routeName:
       return MaterialPageRoute(builder: (context) => const LeafLetScreen());
+
+    case TryingFavouriteScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const TryingFavouriteScreen());
 
     // case CreateGroupScreen.routeName:
     //   return MaterialPageRoute(builder: (context) => const CreateGroupScreen());
