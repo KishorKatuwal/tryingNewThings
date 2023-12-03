@@ -12,20 +12,27 @@ class TryingFavouriteScreen extends StatefulWidget {
 }
 
 class _TryingFavouriteScreenState extends State<TryingFavouriteScreen> {
-  late bool isFavourite;
+  bool isFavourite = false;
   late SharedPreferences preferences;
   late List<String> bookmarkList;
+  final TextEditingController nameController = TextEditingController();
+  bool isLoading = false;
 
   Future<void> _loadPreferences() async {
+    setState(() {
+      isLoading = true;
+    });
     preferences = await SharedPreferences.getInstance();
     isFavourite = preferences.getBool('bookmarkID') ?? false;
     bookmarkList = preferences.getStringList("places") ?? [];
-    setState(() {});
+    setState(() {
+      isLoading = false;
+    });
   }
 
-  Future<void> _bookmarkPlace() async {
-    isFavourite = await preferences.setBool('bookmarkID', true);
-    bookmarkList.add("");
+  Future<void> _bookmarkPlace(String bookmarkPlace) async {
+    isFavourite = await preferences.setBool(bookmarkPlace, true);
+    bookmarkList.add(bookmarkPlace);
     await preferences.setStringList("places", bookmarkList);
     setState(() {});
   }
@@ -61,23 +68,60 @@ class _TryingFavouriteScreenState extends State<TryingFavouriteScreen> {
                   : Icons.favorite_border_outlined)),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15),
-        child: Column(
-          children: [
-            TextFormField(
-              decoration: const InputDecoration(border: OutlineInputBorder()),
+      body: isLoading
+          ? const Center(
+              child: CircularProgressIndicator(),
+            )
+          : Padding(
+              padding: const EdgeInsets.all(15),
+              child: Column(
+                children: [
+                  TextFormField(
+                    controller: nameController,
+                    decoration:
+                        const InputDecoration(border: OutlineInputBorder()),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  CustomButton(
+                      onTap: () {
+                        _bookmarkPlace(nameController.text);
+                      },
+                      text: "Add to shared preferences",
+                      color: Colors.blueGrey),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text("Saved Places"),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: bookmarkList.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            decoration: BoxDecoration(border: Border.all()),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text(bookmarkList[index]),
+                                IconButton(
+                                    onPressed: () {
+                                      _removeBookmarkPlace(bookmarkList[index]);
+                                    },
+                                    icon: const Icon(Icons.delete)),
+                              ],
+                            ),
+                          ),
+                        );
+                      }),
+                ],
+              ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            CustomButton(
-                onTap: () {},
-                text: "Add to shared preferences",
-                color: Colors.blueGrey),
-          ],
-        ),
-      ),
     );
   }
 }
