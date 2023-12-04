@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:own_project/features/country/country_screen.dart';
+import 'package:own_project/features/gpt_4_code/GPTGame.dart';
 import 'package:own_project/features/making_favourite/trying_favourite.dart';
 import 'package:own_project/features/mario/mario_screen.dart';
 import 'package:own_project/features/temples/temple_screen.dart';
@@ -111,6 +112,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 text: "Trying Favourite Screen",
                 onTap: () => Navigator.pushNamed(
                     context, TryingFavouriteScreen.routeName),
+              ),
+              CustomButton(
+                text: "GPT-4 Code",
+                onTap: () => Navigator.pushNamed(
+                    context, GenderAvatar.routeName),
               ),
             ],
           ),
