@@ -52,6 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () => Navigator.pushNamed(context, UserScreen.routeName),
               ),
               CustomButton(
+                text: "RealTime-Crypto",
+                onTap: () => Navigator.pushNamed(context, UserScreen.routeName),
+              ),
+              CustomButton(
                 text: "Push Notification",
                 onTap: () {
                   notificationService.initialiseNotifications();
@@ -115,8 +119,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               CustomButton(
                 text: "GPT-4 Code",
-                onTap: () => Navigator.pushNamed(
-                    context, GenderAvatar.routeName),
+                onTap: () =>
+                    Navigator.pushNamed(context, GenderAvatar.routeName),
               ),
             ],
           ),
