@@ -50,66 +50,66 @@ class EachBitCoinScreen extends StatelessWidget {
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text('Price Change%')),
+                          const DataCell(Text('Price Change%')),
                           DataCell(Text(data.priceChangePercent)),
                         ],
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text("Weighted Average Price")),
+                          const DataCell(Text("Weighted Average Price")),
                           DataCell(Text(data.weightedAvgPrice)),
                         ],
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text("Previous Closing Price")),
+                          const DataCell(Text("Previous Closing Price")),
                           DataCell(Text(data.prevClosePrice)),
                         ],
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text("Open Price")),
+                          const DataCell(Text("Open Price")),
                           DataCell(Text(data.openPrice)),
                         ],
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text("High Price")),
+                          const DataCell(Text("High Price")),
                           DataCell(Text(data.highPrice)),
                         ],
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text("Low Price")),
+                          const DataCell(Text("Low Price")),
                           DataCell(Text(data.lowPrice)),
                         ],
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text("BID Price")),
+                          const DataCell(Text("BID Price")),
                           DataCell(Text(data.bidPrice)),
                         ],
                       ),
                       DataRow(
                         cells: <DataCell>[
-                          DataCell(Text("ASK Price")),
+                          const DataCell(Text("ASK Price")),
                           DataCell(Text(data.askPrice)),
                         ],
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Quantity",
                   style: TextStyle(fontSize: 24),
                 ),
                 descText(headText: "Ask Quantity", bodyText: data.askQty),
                 descText(headText: "Bid Quantity", bodyText: data.bidQty),
                 descText(headText: "Last Quantity", bodyText: data.lastQty),
-                Text(
+                const Text(
                   "Volume",
                   style: TextStyle(fontSize: 24),
                 ),
