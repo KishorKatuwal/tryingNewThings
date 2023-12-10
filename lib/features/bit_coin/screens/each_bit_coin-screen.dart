@@ -133,12 +133,12 @@ Widget descText({
     child: RichText(
       text: TextSpan(
         text: '$headText : ',
-        style: TextStyle(color: Colors.black, fontSize: 18),
+        style: const TextStyle(color: Colors.black, fontSize: 18),
         // Default text style
         children: <TextSpan>[
           TextSpan(
             text: bodyText,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 17,
             ),
