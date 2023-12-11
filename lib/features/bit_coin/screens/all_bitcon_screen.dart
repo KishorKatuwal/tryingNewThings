@@ -14,34 +14,37 @@ class AllBitCoinScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(),
       body: ref.watch(bitDatProvider).when(
-          data: (bitData) => ListView.builder(
-                itemCount: bitData.length,
-                itemBuilder: (context, index) {
-                  final data = bitData[index];
-                  double price = double.parse(data.priceChangePercent);
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: Card(
-                      color: price.isNegative ? Colors.red : Colors.green,
-                      child: ListTile(
-                        onTap: () => Navigator.pushNamed(
-                            context, EachBitCoinScreen.routeName,
-                            arguments: data),
-                        title: Text(
-                          data.symbol,
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+        data: (bitData) =>
+            ListView.builder(
+              itemCount: bitData.length,
+              itemBuilder: (context, index) {
+                final data = bitData[index];
+                double price = double.parse(data.priceChangePercent);
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Card(
+                    color: price.isNegative ? Colors.red : Colors.green,
+                    child: ListTile(
+                      onTap: () =>
+                          Navigator.pushNamed(
+                              context, EachBitCoinScreen.routeName,
+                              arguments: data),
+                      title: Text(
+                        data.symbol,
+                        style: const TextStyle(
+                          fontSize: 18,
                         ),
                       ),
                     ),
-                  );
-                },
-              ),
-          error: (err, trace) => Text(err.toString()),
-          loading: () => const Center(
-                child: CircularProgressIndicator(),
-              )),
+                  ),
+                );
+              },
+            ),
+        error: (err, trace) => Text(err.toString()),
+        loading: () =>
+        const Center(
+          child: CircularProgressIndicator(),
+        ),),
     );
   }
 }
