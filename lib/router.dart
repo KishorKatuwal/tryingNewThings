@@ -7,6 +7,7 @@ import 'package:own_project/features/game/screens/game_screen.dart';
 import 'package:own_project/features/gpt_4_code/GPTGame.dart';
 import 'package:own_project/features/making_favourite/trying_favourite.dart';
 import 'package:own_project/features/reading_text/reading_text.dart';
+import 'package:own_project/features/real_time_crypto/crypto_screen.dart';
 import 'package:own_project/features/temples/temple_screen.dart';
 import 'package:own_project/features/trying_map/trying_map.dart';
 import 'package:own_project/models/bit_coin_model.dart';
@@ -38,6 +39,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
     case UserScreen.routeName:
       return MaterialPageRoute(builder: (context) => const UserScreen());
+
+    case RealTimeCryptoScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const RealTimeCryptoScreen());
 
     case TryingMapScreen.routeName:
       return MaterialPageRoute(builder: (context) => const TryingMapScreen());

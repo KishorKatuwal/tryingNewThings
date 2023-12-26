@@ -13,6 +13,7 @@ import '../features/game/screens/game_screen.dart';
 import '../features/leaflet_map/LeafLetScreen.dart';
 import '../features/pdf_reader/pdf_reader.dart';
 import '../features/reading_text/reading_text.dart';
+import '../features/real_time_crypto/crypto_screen.dart';
 import '../notification/notification_service.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -53,7 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               CustomButton(
                 text: "RealTime-Crypto",
-                onTap: () => Navigator.pushNamed(context, UserScreen.routeName),
+                onTap: () => Navigator.pushNamed(
+                    context, RealTimeCryptoScreen.routeName),
               ),
               CustomButton(
                 text: "Push Notification",

@@ -9,21 +9,6 @@ final cryptoRepositoryProvider = Provider((ref) => CryptoRepository());
 class CryptoRepository {
   String uri = "https://api.coincap.io/v2/assets";
 
-  // Future<List<CryptoModel>> getCryptoData()  async{
-  //   try {
-  //     http.Response res = await  http.get(Uri.parse(uri), headers: {
-  //       'Content-Type': 'application/json; charset=UTF-8',
-  //     });
-  //     if (res.statusCode == 200) {
-  //       return cryptoModelFromJson(res.body);
-  //     }else{
-  //       throw "Error";
-  //     }
-  //   } catch (e) {
-  //     throw Exception(e.toString());
-  //   }
-  // }
-
   StreamController<List<CryptoModel>> cryptoDataController =
       StreamController<List<CryptoModel>>();
 
@@ -34,7 +19,8 @@ class CryptoRepository {
       }).then((res) {
         if (res.statusCode == 200) {
           List<CryptoModel> cryptoData = cryptoModelFromJson(res.body);
-          cryptoDataController.add(cryptoData); // Add data to the stream
+          cryptoDataController.add(cryptoData);
+          // Add data to the stream
         }
       }).catchError((e) {
         cryptoDataController
@@ -44,7 +30,6 @@ class CryptoRepository {
       cryptoDataController
           .addError(Exception(e.toString())); // Add error to the stream
     }
-
     return cryptoDataController.stream;
   }
 }

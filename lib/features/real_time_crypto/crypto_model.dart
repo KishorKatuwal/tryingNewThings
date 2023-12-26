@@ -38,13 +38,13 @@ class CryptoModel {
         symbol: json["symbol"],
         name: json["name"],
         supply: json["supply"],
-        maxSupply: json["maxSupply"],
+        maxSupply: json["maxSupply"] ?? "NA",
         marketCapUsd: json["marketCapUsd"],
         volumeUsd24Hr: json["volumeUsd24Hr"],
         priceUsd: json["priceUsd"],
         changePercent24Hr: json["changePercent24Hr"],
-        vwap24Hr: json["vwap24Hr"],
-        explorer: json["explorer"],
+        vwap24Hr: json["vwap24Hr"] ?? "NA",
+        explorer: json["explorer"] ?? "NA",
       );
 
   Map<String, dynamic> toJson() => {
