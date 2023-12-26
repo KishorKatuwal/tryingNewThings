@@ -24,56 +24,59 @@ class _RealTimeCryptoScreenState extends ConsumerState<RealTimeCryptoScreen> {
         title: const Text("Real Time Crypto Screen"),
       ),
       body: ref.watch(bitDataProvider).when(
-          data: (data) {
-            cryptoModel = data;
-            return ListView.builder(
-                itemCount: cryptoModel.length,
-                itemBuilder: (context, index) {
-                  final data = cryptoModel[index];
-                  return Card(
-                    elevation: 5,
-                    color: (double.parse(data.changePercent24Hr)) > 0
-                        ? Colors.green
-                        : Colors.red,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                data.name,
-                                style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                data.symbol,
-                                style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            data.priceUsd,
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+            data: (data) {
+              cryptoModel = data;
+              return ListView.builder(
+                  itemCount: cryptoModel.length,
+                  itemBuilder: (context, index) {
+                    final data = cryptoModel[index];
+                    return Card(
+                      elevation: 5,
+                      color: (double.parse(data.changePercent24Hr)) > 0
+                          ? Colors.green
+                          : Colors.red,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  data.name,
+                                  style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  data.symbol,
+                                  style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              data.priceUsd,
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  );
-                });
-          },
-          error: (err, trace) => Text(err.toString()),
-          loading: () => const Center(
-                child: CircularProgressIndicator(),
-              )),
+                    );
+                  });
+            },
+            error: (err, trace) => Text(err.toString()),
+            loading: () => const Center(
+              child: CircularProgressIndicator(),
+            ),
+          ),
     );
   }
 }

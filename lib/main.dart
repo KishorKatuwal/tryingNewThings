@@ -56,7 +56,6 @@ class _MyAppState extends State<MyApp> {
           body: "From Main body",
         );
       } catch (e) {
-        print("Hiiting in catch");
         event.notification.display();
       }
     });
@@ -76,7 +75,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-
-
-
