@@ -8,7 +8,7 @@ final cryptoControllerProvider = Provider((ref) {
   return CryptoController(cryptoRepository: cryptoRepository, ref: ref);
 });
 
-final bitDataProvider = StreamProvider.autoDispose<List<CryptoModel>>((ref) {
+final bitDataProvider = StreamProvider<List<CryptoModel>>((ref) {
   final cryptoController = ref.watch(cryptoControllerProvider);
   return cryptoController.getCryptoData();
 });
